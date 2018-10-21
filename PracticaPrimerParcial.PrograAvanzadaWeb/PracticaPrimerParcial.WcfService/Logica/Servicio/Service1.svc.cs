@@ -40,6 +40,13 @@ namespace PracticaPrimerParcial.WcfService
             return resultado;
         }
 
+        public double AreaTrapecio(double Altura, double BMayor, double BMenor)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionTrapecio();
+            var resultado = laEspecificacion.AreaTrapecio(Altura, BMayor,BMenor);
+            return resultado;
+        }
+
         public double AreaTriangulo(double L1, double L2, double L3)
         {
             Logica.Especificacion.OperacionTriangulo laEspecificacion;
@@ -91,6 +98,13 @@ namespace PracticaPrimerParcial.WcfService
         {
             var laEspecificacion = new Logica.Especificacion.OperacionRombo();
             var resultado = laEspecificacion.PerimetroRombo(Lado);
+            return resultado;
+        }
+
+        public double PerimetroTrapecio(double A, double B, double C, double D)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionTrapecio();
+            var resultado = laEspecificacion.PerimetroTrapecio(A,B,C,D);
             return resultado;
         }
 

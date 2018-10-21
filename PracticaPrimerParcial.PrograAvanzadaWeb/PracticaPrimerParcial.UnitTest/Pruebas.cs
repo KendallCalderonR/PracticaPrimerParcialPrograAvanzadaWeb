@@ -20,8 +20,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.PerimetroTriangulo(L1,L2,L3);
 
             Assert.AreEqual(ValorEsperado,ValorReal);
-            
-
         }
 
         [TestMethod]
@@ -37,8 +35,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.PerimetroTriangulo(L1, L2, L3);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
-
         }
 
         [TestMethod]
@@ -54,7 +50,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.AreaTriangulo(L1, L2, L3);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
         [TestMethod]
@@ -70,7 +65,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.AreaTriangulo(L1, L2, L3);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
         [TestMethod]
@@ -84,7 +78,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.PerimetroCuadrado(L1);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
         [TestMethod]
@@ -98,7 +91,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.PerimetroCuadrado(L1);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
         [TestMethod]
@@ -112,7 +104,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.AreaCuadrado(L1);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
         [TestMethod]
@@ -126,7 +117,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.AreaCuadrado(L1);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
 
@@ -142,7 +132,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.PerimetroRectangulo(Largo,Ancho);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
         [TestMethod]
@@ -157,7 +146,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.PerimetroRectangulo(Largo, Ancho);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
         [TestMethod]
@@ -172,7 +160,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.AreaRectangulo(Largo, Ancho);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
         [TestMethod]
@@ -187,7 +174,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.AreaRectangulo(Largo, Ancho);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
         [TestMethod]
@@ -201,7 +187,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.PerimetroRombo(Lado);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
         [TestMethod]
@@ -215,7 +200,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.PerimetroRombo(Lado);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
         [TestMethod]
@@ -230,7 +214,6 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.AreaRombo(Dmayor,DMenor);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
-
         }
 
         [TestMethod]
@@ -345,6 +328,86 @@ namespace PracticaPrimerParcial.UnitTest
 
             var elServicio = new WcfService.Service1();
             ValorReal = elServicio.AreaPoligonoRegular(CantidadLados, LargoLados, Apotema);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void TrapecioPerimetroLadosPositivos()
+        {
+            var A = 5;
+            var B = 8;
+            var C = 7;
+            var D = 12;
+            var ValorEsperado = 32;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroTrapecio(A,B,C,D);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void TrapecioPerimetroLadosNegativos()
+        {
+            var A = -5;
+            var B = 8;
+            var C = 7;
+            var D = 12;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroTrapecio(A, B, C, D);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void TrapecioAreaTodoPositivos()
+        {
+            var Altura = 5;
+            var BMayor = 12;
+            var BMenor = 7;
+            
+            var ValorEsperado = 47.5;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaTrapecio(Altura,BMayor,BMenor);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void TrapecioAreaAlturaNegativa()
+        {
+            var Altura = -5;
+            var BMayor = 12;
+            var BMenor = 7;
+
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaTrapecio(Altura, BMayor, BMenor);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void TrapecioAreaBMayorCero()
+        {
+            var Altura = 5;
+            var BMayor = 0;
+            var BMenor = 7;
+
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaTrapecio(Altura, BMayor, BMenor);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
         }

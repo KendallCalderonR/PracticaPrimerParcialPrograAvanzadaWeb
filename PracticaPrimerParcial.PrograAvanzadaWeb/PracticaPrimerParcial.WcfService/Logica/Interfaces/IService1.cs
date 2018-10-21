@@ -42,6 +42,13 @@ namespace PracticaPrimerParcial.WcfService
         [OperationContract]
         double AreaPoligonoRegular(int CantidadLados, double Largo, double Apotema);
 
+        [OperationContract]
+        double PerimetroTrapecio(double A, double B, double C, double D);
+
+        [OperationContract]
+        double AreaTrapecio(double Altura, double BMayor, double BMenor);
+
+
 
         [OperationContract]
         string GetData(int value);
