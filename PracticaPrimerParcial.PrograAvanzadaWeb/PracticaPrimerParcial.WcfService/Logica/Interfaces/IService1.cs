@@ -36,6 +36,12 @@ namespace PracticaPrimerParcial.WcfService
         [OperationContract]
         double AreaRombo(double DMayor, double DMenor);
 
+        [OperationContract]
+        double PerimetroPoligonoRegular(int CantidadLados, double Largo);
+
+        [OperationContract]
+        double AreaPoligonoRegular(int CantidadLados, double Largo, double Apotema);
+
 
         [OperationContract]
         string GetData(int value);

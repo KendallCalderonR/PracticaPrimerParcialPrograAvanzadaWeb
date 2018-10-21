@@ -66,10 +66,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logica\Accion\OperacionCuadrado.cs" />
+    <Compile Include="Logica\Accion\OperacionPoligonoRegular.cs" />
     <Compile Include="Logica\Accion\OperacionRectangulo.cs" />
     <Compile Include="Logica\Accion\OperacionRombo.cs" />
     <Compile Include="Logica\Accion\OperacionTriangulo.cs" />
     <Compile Include="Logica\Especificacion\OperacionCuadrado.cs" />
+    <Compile Include="Logica\Especificacion\OperacionPoligonoRegular.cs" />
     <Compile Include="Logica\Especificacion\OperacionRectangulo.cs" />
     <Compile Include="Logica\Especificacion\OperacionRombo.cs" />
     <Compile Include="Logica\Especificacion\OperacionTriangulo.cs" />
@@ -78,6 +80,7 @@
     </Compile>
     <Compile Include="Logica\Interfaces\IService1.cs" />
     <Compile Include="Logica\Validacion\OperacionCuadrado.cs" />
+    <Compile Include="Logica\Validacion\OperacionPoligonoRegular.cs" />
     <Compile Include="Logica\Validacion\OperacionRectangulo.cs" />
     <Compile Include="Logica\Validacion\OperacionRombo.cs" />
     <Compile Include="Logica\Validacion\OperacionTriengulo.cs" />

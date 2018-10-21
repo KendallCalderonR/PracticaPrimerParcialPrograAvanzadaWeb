@@ -245,7 +245,108 @@ namespace PracticaPrimerParcial.UnitTest
             ValorReal = elServicio.AreaRombo(Dmayor, DMenor);
 
             Assert.AreEqual(ValorEsperado, ValorReal);
+        }
 
+        [TestMethod]
+        public void PoligonoRegularPerimetroladosPositivos()
+        {
+            var CantidadLados = 6;
+            var LargoLados = 7;
+            var ValorEsperado = 42;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroPoligonoRegular(CantidadLados, LargoLados);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void PoligonoRegularPerimetroladosNegativos()
+        {
+            var CantidadLados = -6;
+            var LargoLados = 7;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroPoligonoRegular(CantidadLados, LargoLados);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void PoligonoRegularPerimetroLargoLadosNegativos()
+        {
+            var CantidadLados = 6;
+            var LargoLados = -7;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroPoligonoRegular(CantidadLados, LargoLados);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void PoligonoRegularArealadosPositivos()
+        {
+            var CantidadLados = 6;
+            var LargoLados = 7;
+            var Apotema = 5;
+            var ValorEsperado = 105;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaPoligonoRegular(CantidadLados, LargoLados,Apotema);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void PoligonoRegularAreaCantidadLadosNegativa()
+        {
+            var CantidadLados = -6;
+            var LargoLados = 7;
+            var Apotema = 5;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaPoligonoRegular(CantidadLados, LargoLados, Apotema);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void PoligonoRegularAreaLargoLadosNegativa()
+        {
+            var CantidadLados = 6;
+            var LargoLados = -7;
+            var Apotema = 5;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaPoligonoRegular(CantidadLados, LargoLados, Apotema);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void PoligonoRegularAreaApotemaNegativa()
+        {
+            var CantidadLados = 6;
+            var LargoLados = 7;
+            var Apotema = -5;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaPoligonoRegular(CantidadLados, LargoLados, Apotema);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
         }
 
     }
