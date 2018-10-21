@@ -26,6 +26,13 @@ namespace PracticaPrimerParcial.WcfService
             return resultado;
         }
 
+        public double AreaRombo(double DMayor, double DMenor)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionRombo();
+            var resultado = laEspecificacion.AreaRombo(DMayor,DMenor);
+            return resultado;
+        }
+
         public double AreaTriangulo(double L1, double L2, double L3)
         {
             Logica.Especificacion.OperacionTriangulo laEspecificacion;
@@ -63,6 +70,13 @@ namespace PracticaPrimerParcial.WcfService
         {
             var laEspecificacion = new Logica.Especificacion.OperacionRectangulo();
             var resultado = laEspecificacion.PerimetroTriangulo(Largo, Ancho);
+            return resultado;
+        }
+
+        public double PerimetroRombo(double Lado)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionRombo();
+            var resultado = laEspecificacion.PerimetroRombo(Lado);
             return resultado;
         }
 

@@ -190,6 +190,63 @@ namespace PracticaPrimerParcial.UnitTest
 
         }
 
+        [TestMethod]
+        public void RomboPerimetroLadoPositivo()
+        {
+            var Lado = 30;    
+            var ValorEsperado = 120;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroRombo(Lado);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+
+        }
+
+        [TestMethod]
+        public void RomboPerimetroLadoNegativo()
+        {
+            var Lado = -30;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroRombo(Lado);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+
+        }
+
+        [TestMethod]
+        public void RomboAreaDiagonalesPositivas()
+        {
+            var Dmayor = 30;
+            var DMenor = 15;
+            var ValorEsperado = 225;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaRombo(Dmayor,DMenor);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+
+        }
+
+        [TestMethod]
+        public void RomboAreaDiagonalesNegativas()
+        {
+            var Dmayor = -30;
+            var DMenor = 15;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaRombo(Dmayor, DMenor);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+
+        }
 
     }
 }

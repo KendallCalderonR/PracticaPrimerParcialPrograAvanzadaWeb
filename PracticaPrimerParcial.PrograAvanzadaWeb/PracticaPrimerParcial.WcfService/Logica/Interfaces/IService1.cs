@@ -30,6 +30,11 @@ namespace PracticaPrimerParcial.WcfService
         [OperationContract]
         double AreaRectangulo(double Largo, double Ancho);
 
+        [OperationContract]
+        double PerimetroRombo(double Lado);
+
+        [OperationContract]
+        double AreaRombo(double DMayor, double DMenor);
 
 
         [OperationContract]
