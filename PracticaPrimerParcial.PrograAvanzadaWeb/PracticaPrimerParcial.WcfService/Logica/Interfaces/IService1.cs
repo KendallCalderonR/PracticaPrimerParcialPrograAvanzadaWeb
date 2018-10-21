@@ -48,6 +48,12 @@ namespace PracticaPrimerParcial.WcfService
         [OperationContract]
         double AreaTrapecio(double Altura, double BMayor, double BMenor);
 
+        [OperationContract]
+        double PerimetroRomboide(double Largo, double Ancho);
+
+        [OperationContract]
+        double AreaRomboide(double Base, double Altura);
+
 
 
         [OperationContract]

@@ -412,5 +412,91 @@ namespace PracticaPrimerParcial.UnitTest
             Assert.AreEqual(ValorEsperado, ValorReal);
         }
 
+        [TestMethod]
+        public void RomboidePerimetroLargoAnchoPositivos()
+        {
+            var Largo = 10;
+            var Ancho = 7;
+            var ValorEsperado = 34;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroRomboide(Largo, Ancho);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void RomboidePerimetroLargoNegativo()
+        {
+            var Largo = -10;
+            var Ancho = 7;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroRomboide(Largo, Ancho);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void RomboidePerimetroAnchoNegativo()
+        {
+            var Largo = 10;
+            var Ancho = -7;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroRomboide(Largo, Ancho);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void RomboideAreaBaseAlturaPositivos()
+        {
+            var Base = 10;
+            var Altura = 5;
+            var ValorEsperado = 50;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaRomboide(Base, Altura);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void RomboideAreaBaseNegativos()
+        {
+            var Base = -10;
+            var Altura = 5;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaRomboide(Base, Altura);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void RomboideAreaAlturaNegativos()
+        {
+            var Base = 10;
+            var Altura = -5;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaRomboide(Base, Altura);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+
+
     }
 }

@@ -40,6 +40,13 @@ namespace PracticaPrimerParcial.WcfService
             return resultado;
         }
 
+        public double AreaRomboide(double Base, double Altura)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionRomboide();
+            var resultado = laEspecificacion.AreaRomboide(Base, Altura);
+            return resultado;
+        }
+
         public double AreaTrapecio(double Altura, double BMayor, double BMenor)
         {
             var laEspecificacion = new Logica.Especificacion.OperacionTrapecio();
@@ -98,6 +105,13 @@ namespace PracticaPrimerParcial.WcfService
         {
             var laEspecificacion = new Logica.Especificacion.OperacionRombo();
             var resultado = laEspecificacion.PerimetroRombo(Lado);
+            return resultado;
+        }
+
+        public double PerimetroRomboide(double Largo, double Ancho)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionRomboide();
+            var resultado = laEspecificacion.PerimetroRomboide(Largo, Ancho);
             return resultado;
         }
 

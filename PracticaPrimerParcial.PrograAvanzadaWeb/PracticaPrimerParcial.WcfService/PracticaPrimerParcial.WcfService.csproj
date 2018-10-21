@@ -69,12 +69,14 @@
     <Compile Include="Logica\Accion\OperacionPoligonoRegular.cs" />
     <Compile Include="Logica\Accion\OperacionRectangulo.cs" />
     <Compile Include="Logica\Accion\OperacionRombo.cs" />
+    <Compile Include="Logica\Accion\OperacionRomboide.cs" />
     <Compile Include="Logica\Accion\OperacionTrapecio.cs" />
     <Compile Include="Logica\Accion\OperacionTriangulo.cs" />
     <Compile Include="Logica\Especificacion\OperacionCuadrado.cs" />
     <Compile Include="Logica\Especificacion\OperacionPoligonoRegular.cs" />
     <Compile Include="Logica\Especificacion\OperacionRectangulo.cs" />
     <Compile Include="Logica\Especificacion\OperacionRombo.cs" />
+    <Compile Include="Logica\Especificacion\OperacionRomboide.cs" />
     <Compile Include="Logica\Especificacion\OperacionTrapecio.cs" />
     <Compile Include="Logica\Especificacion\OperacionTriangulo.cs" />
     <Compile Include="Logica\Servicio\Service1.svc.cs">
@@ -85,6 +87,7 @@
     <Compile Include="Logica\Validacion\OperacionPoligonoRegular.cs" />
     <Compile Include="Logica\Validacion\OperacionRectangulo.cs" />
     <Compile Include="Logica\Validacion\OperacionRombo.cs" />
+    <Compile Include="Logica\Validacion\OperacionRomboide.cs" />
     <Compile Include="Logica\Validacion\OperacionTrapecio.cs" />
     <Compile Include="Logica\Validacion\OperacionTriengulo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
