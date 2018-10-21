@@ -7,6 +7,15 @@ namespace PracticaPrimerParcial.WcfService.Logica.Validacion
 {
     public class OperacionTriengulo
     {
+        public bool LosLadosNoSonNegativos(double L1, double L2, double L3)
+        {
+            bool resultado = true;
+
+            resultado = (L1 >= 0 && L2 >= 0 && L3 >= 0);
+
+            return resultado;
+
+        }
 
         public bool LosLadosSonCorrectos(double L1,double L2, double L3)
         {
@@ -38,7 +47,7 @@ namespace PracticaPrimerParcial.WcfService.Logica.Validacion
 
             var sumaMenores = LadoMenor1 + LadoMenor2;
 
-            if (LadoMayor < sumaMenores)
+            if (LadoMayor > sumaMenores)
             {
                 resultado = false;
             }

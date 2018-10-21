@@ -12,6 +12,14 @@ namespace PracticaPrimerParcial.WcfService
     // NOTE: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service1.svc o Service1.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class Service1 : IService1
     {
+        public double AreaTriangulo(double L1, double L2, double L3)
+        {
+            Logica.Especificacion.OperacionTriangulo laEspecificacion;
+            laEspecificacion = new Logica.Especificacion.OperacionTriangulo();
+            var resultado = laEspecificacion.AreaTriangulo(L1, L2, L3);
+            return resultado;
+        }
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);

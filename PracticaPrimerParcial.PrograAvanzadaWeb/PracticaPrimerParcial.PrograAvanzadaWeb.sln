@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticaPrimerParcial.WcfService", "PracticaPrimerParcial.WcfService\PracticaPrimerParcial.WcfService.csproj", "{C5720D00-3D25-4E47-8271-951E122ED5AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticaPrimerParcial.UnitTest", "PracticaPrimerParcial.UnitTest\PracticaPrimerParcial.UnitTest.csproj", "{618A225D-A9EC-4923-A61E-7EA9367E4A0B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C5720D00-3D25-4E47-8271-951E122ED5AA} = {C5720D00-3D25-4E47-8271-951E122ED5AA}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
