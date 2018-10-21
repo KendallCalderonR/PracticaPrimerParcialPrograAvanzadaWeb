@@ -496,6 +496,34 @@ namespace PracticaPrimerParcial.UnitTest
             Assert.AreEqual(ValorEsperado, ValorReal);
         }
 
+        [TestMethod]
+        public void CilindroVolumenRadioAlturaPositivos()
+        {//3.14159265358979000000
+            var Radio = 10;
+            var Altura = 15;
+            var ValorEsperado = 4712.38898038469;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenCilindro(Radio, Altura);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void CilindroVolumenRadioAlturaNegativos()
+        {//3.14159265358979000000
+            var Radio = -10;
+            var Altura = 15;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenCilindro(Radio, Altura);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
 
 
     }

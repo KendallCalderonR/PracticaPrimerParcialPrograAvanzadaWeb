@@ -54,6 +54,8 @@ namespace PracticaPrimerParcial.WcfService
         [OperationContract]
         double AreaRomboide(double Base, double Altura);
 
+        [OperationContract]
+        double VolumenCilindro(double radio, double altura);
 
 
         [OperationContract]

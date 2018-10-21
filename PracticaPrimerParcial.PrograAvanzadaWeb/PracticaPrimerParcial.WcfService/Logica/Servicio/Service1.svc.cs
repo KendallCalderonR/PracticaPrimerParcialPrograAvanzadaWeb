@@ -136,5 +136,12 @@ namespace PracticaPrimerParcial.WcfService
             var resultado = laEspecificacion.PerimetroTriangulo(L1, L2, L3);
             return resultado;
         }
+
+        public double VolumenCilindro(double radio, double altura)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionCilindro();
+            var resultado = laEspecificacion.VolumenCilindro(radio, altura);
+            return resultado;
+        }
     }
 }

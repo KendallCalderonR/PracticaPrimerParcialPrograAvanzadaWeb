@@ -65,6 +65,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logica\Accion\OperacionCilindro.cs" />
     <Compile Include="Logica\Accion\OperacionCuadrado.cs" />
     <Compile Include="Logica\Accion\OperacionPoligonoRegular.cs" />
     <Compile Include="Logica\Accion\OperacionRectangulo.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Logica\Accion\OperacionRomboide.cs" />
     <Compile Include="Logica\Accion\OperacionTrapecio.cs" />
     <Compile Include="Logica\Accion\OperacionTriangulo.cs" />
+    <Compile Include="Logica\Especificacion\OperacionCilindro.cs" />
     <Compile Include="Logica\Especificacion\OperacionCuadrado.cs" />
     <Compile Include="Logica\Especificacion\OperacionPoligonoRegular.cs" />
     <Compile Include="Logica\Especificacion\OperacionRectangulo.cs" />
@@ -83,6 +85,7 @@
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
     <Compile Include="Logica\Interfaces\IService1.cs" />
+    <Compile Include="Logica\Validacion\OperacionCilindro.cs" />
     <Compile Include="Logica\Validacion\OperacionCuadrado.cs" />
     <Compile Include="Logica\Validacion\OperacionPoligonoRegular.cs" />
     <Compile Include="Logica\Validacion\OperacionRectangulo.cs" />
