@@ -129,5 +129,67 @@ namespace PracticaPrimerParcial.UnitTest
 
         }
 
+
+        [TestMethod]
+        public void RectanguloPerimetroLadoPositivos()
+        {
+            var Largo = 30;
+            var Ancho = 15;
+            var ValorEsperado = 90;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroRectangulo(Largo,Ancho);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+
+        }
+
+        [TestMethod]
+        public void RectanguloPerimetroLadosNegativos()
+        {
+            var Largo = -30;
+            var Ancho = 15;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroRectangulo(Largo, Ancho);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+
+        }
+
+        [TestMethod]
+        public void RectanguloAreaLadoPositivos()
+        {
+            var Largo = 30;
+            var Ancho = 15;
+            var ValorEsperado = 450;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaRectangulo(Largo, Ancho);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+
+        }
+
+        [TestMethod]
+        public void RectanguloAreaLadosNegativos()
+        {
+            var Largo = -30;
+            var Ancho = 15;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaRectangulo(Largo, Ancho);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+
+        }
+
+
     }
 }
