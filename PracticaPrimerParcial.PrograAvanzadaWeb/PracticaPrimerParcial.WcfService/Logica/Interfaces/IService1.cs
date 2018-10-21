@@ -19,6 +19,12 @@ namespace PracticaPrimerParcial.WcfService
         double AreaTriangulo(double L1, double L2, double L3);
 
         [OperationContract]
+        double PerimetroCuadrado(double Lado);
+
+        [OperationContract]
+        double AreaCuadrado(double Lado);
+
+        [OperationContract]
         string GetData(int value);
 
         [OperationContract]

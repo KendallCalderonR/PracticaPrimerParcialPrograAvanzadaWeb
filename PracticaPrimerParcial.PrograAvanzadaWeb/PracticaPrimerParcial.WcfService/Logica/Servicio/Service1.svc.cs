@@ -12,6 +12,13 @@ namespace PracticaPrimerParcial.WcfService
     // NOTE: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service1.svc o Service1.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class Service1 : IService1
     {
+        public double AreaCuadrado(double Lado)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionCuadrado();
+            var resultado = laEspecificacion.AreaCuadrado(Lado);
+            return resultado;
+        }
+
         public double AreaTriangulo(double L1, double L2, double L3)
         {
             Logica.Especificacion.OperacionTriangulo laEspecificacion;
@@ -36,6 +43,13 @@ namespace PracticaPrimerParcial.WcfService
                 composite.StringValue += "Suffix";
             }
             return composite;
+        }
+
+        public double PerimetroCuadrado(double Lado)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionCuadrado();
+            var resultado = laEspecificacion.PerimetroCuadrado(Lado);
+            return resultado;
         }
 
         /// <summary>

@@ -8,7 +8,7 @@ namespace PracticaPrimerParcial.UnitTest
     public class Pruebas
     {
         [TestMethod]
-        public void PerimetroLadosPositivos()
+        public void TrianguloPerimetroLadosPositivos()
         {
             var L1 = 2;
             var L2 = 4;
@@ -25,7 +25,7 @@ namespace PracticaPrimerParcial.UnitTest
         }
 
         [TestMethod]
-        public void PerimetroLadosNegativos()
+        public void TrianguloPerimetroLadosNegativos()
         {
             var L1 = 2;
             var L2 = -4;
@@ -42,7 +42,7 @@ namespace PracticaPrimerParcial.UnitTest
         }
 
         [TestMethod]
-        public void AreaLadosPositivos()
+        public void TrianguloAreaLadosPositivos()
         {
             var L1 = 15;
             var L2 = 20;
@@ -58,7 +58,7 @@ namespace PracticaPrimerParcial.UnitTest
         }
 
         [TestMethod]
-        public void AreaLadosNegativos()
+        public void TrianguloAreaLadosNegativos()
         {
             var L1 = -15;
             var L2 = 20;
@@ -72,5 +72,62 @@ namespace PracticaPrimerParcial.UnitTest
             Assert.AreEqual(ValorEsperado, ValorReal);
 
         }
+
+        [TestMethod]
+        public void CuadradoPerimetroLadoPositivos()
+        {
+            var L1 = 15;
+            var ValorEsperado = 60;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroCuadrado(L1);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+
+        }
+
+        [TestMethod]
+        public void CuadradoPerimetroLadoNegativos()
+        {
+            var L1 = -15;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.PerimetroCuadrado(L1);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+
+        }
+
+        [TestMethod]
+        public void CuadradoAreaLadoPositivos()
+        {
+            var L1 = 15;
+            var ValorEsperado = 225;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaCuadrado(L1);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+
+        }
+
+        [TestMethod]
+        public void CuadradoAreaLadoNegativos()
+        {
+            var L1 = -15;
+            var ValorEsperado = 0;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.AreaCuadrado(L1);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+
+        }
+
     }
 }
