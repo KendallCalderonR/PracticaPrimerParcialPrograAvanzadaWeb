@@ -524,7 +524,108 @@ namespace PracticaPrimerParcial.UnitTest
             Assert.AreEqual(ValorEsperado, ValorReal);
         }
 
+        [TestMethod]
+        public void EsferaVolumenRadioPositivo()
+        {//3.14159265358979000000
+            var Radio = 10;
+            var ValorEsperado = 3141.5926535897929;
+;
+            var ValorReal = 0.0;
 
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenEsfera(Radio);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void EsferaVolumenRadioNegativo()
+        {//3.14159265358979000000
+            var Radio = -10;
+            var ValorEsperado = 0;
+            ;
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenEsfera(Radio);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void ConoVolumenRadioAlturaPositivos()
+        {
+            var Radio = 7;
+            var altura = 10;
+            var ValorEsperado = 513.12680008633288;
+            
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenCono(Radio,altura);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void ConoVolumenRadioNegativo()
+        {
+            var Radio = -7;
+            var altura = 10;
+            var ValorEsperado = 0;
+
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenCono(Radio, altura);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void ConoVolumenAlturaNegativo()
+        {
+            var Radio = 7;
+            var altura = -10;
+            var ValorEsperado = 0;
+
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenCono(Radio, altura);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void CuboVolumenAristaPositiva()
+        {
+            var arista = 10;
+            
+            var ValorEsperado = 1000;
+
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenCubo(arista);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void CuboVolumenAristaNegativo()
+        {
+            var arista = -10;
+
+            var ValorEsperado = 0;
+
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenCubo(arista);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
 
     }
 }

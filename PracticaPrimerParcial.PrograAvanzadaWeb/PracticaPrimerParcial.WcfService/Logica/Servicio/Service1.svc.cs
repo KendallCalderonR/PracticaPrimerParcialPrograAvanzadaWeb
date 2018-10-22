@@ -143,5 +143,26 @@ namespace PracticaPrimerParcial.WcfService
             var resultado = laEspecificacion.VolumenCilindro(radio, altura);
             return resultado;
         }
+
+        public double VolumenCono(double radio, double altura)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionCono();
+            var resultado = laEspecificacion.ConoVolumen(radio, altura);
+            return resultado;
+        }
+
+        public double VolumenCubo(double arista)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionCubo();
+            var resultado = laEspecificacion.VolumenCubo(arista);
+            return resultado;
+        }
+
+        public double VolumenEsfera(double radio)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionEsfera();
+            var resultado = laEspecificacion.VolumenEsfera(radio);
+            return resultado;
+        }
     }
 }
