@@ -70,7 +70,9 @@
     <Compile Include="Logica\Accion\OperacionCuadrado.cs" />
     <Compile Include="Logica\Accion\OperacionCubo.cs" />
     <Compile Include="Logica\Accion\OperacionEsfera.cs" />
+    <Compile Include="Logica\Accion\OperacionPiramideCuadrada.cs" />
     <Compile Include="Logica\Accion\OperacionPoligonoRegular.cs" />
+    <Compile Include="Logica\Accion\OperacionPrisma.cs" />
     <Compile Include="Logica\Accion\OperacionRectangulo.cs" />
     <Compile Include="Logica\Accion\OperacionRombo.cs" />
     <Compile Include="Logica\Accion\OperacionRomboide.cs" />
@@ -81,7 +83,9 @@
     <Compile Include="Logica\Especificacion\OperacionCuadrado.cs" />
     <Compile Include="Logica\Especificacion\OperacionCubo.cs" />
     <Compile Include="Logica\Especificacion\OperacionEsfera.cs" />
+    <Compile Include="Logica\Especificacion\OperacionPiramideCuadrada.cs" />
     <Compile Include="Logica\Especificacion\OperacionPoligonoRegular.cs" />
+    <Compile Include="Logica\Especificacion\OperacionPrisma.cs" />
     <Compile Include="Logica\Especificacion\OperacionRectangulo.cs" />
     <Compile Include="Logica\Especificacion\OperacionRombo.cs" />
     <Compile Include="Logica\Especificacion\OperacionRomboide.cs" />
@@ -96,7 +100,9 @@
     <Compile Include="Logica\Validacion\OperacionCuadrado.cs" />
     <Compile Include="Logica\Validacion\OperacionCubo.cs" />
     <Compile Include="Logica\Validacion\OperacionEsfera.cs" />
+    <Compile Include="Logica\Validacion\OperacionPiramideCuadrada.cs" />
     <Compile Include="Logica\Validacion\OperacionPoligonoRegular.cs" />
+    <Compile Include="Logica\Validacion\OperacionPrisma.cs" />
     <Compile Include="Logica\Validacion\OperacionRectangulo.cs" />
     <Compile Include="Logica\Validacion\OperacionRombo.cs" />
     <Compile Include="Logica\Validacion\OperacionRomboide.cs" />

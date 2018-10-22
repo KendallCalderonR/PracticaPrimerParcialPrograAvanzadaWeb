@@ -66,6 +66,11 @@ namespace PracticaPrimerParcial.WcfService
         [OperationContract]
         double VolumenCubo(double arista);
 
+        [OperationContract]
+        double VolumenPrisma(double largo, double ancho, double altura);
+
+        [OperationContract]
+        double VolumenPiramideCuadrada(double lado, double altura);
 
         [OperationContract]
         string GetData(int value);

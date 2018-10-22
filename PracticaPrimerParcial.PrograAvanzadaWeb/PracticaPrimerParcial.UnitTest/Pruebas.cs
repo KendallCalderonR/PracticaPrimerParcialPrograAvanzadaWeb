@@ -627,5 +627,67 @@ namespace PracticaPrimerParcial.UnitTest
             Assert.AreEqual(ValorEsperado, ValorReal);
         }
 
+        [TestMethod]
+        public void PrismaVolumenDatosPositivos()
+        {
+            var largo = 10;
+            var ancho = 5;
+            var altura = 20;
+            var ValorEsperado = 1000;
+
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenPrisma(largo,ancho,altura);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void PrismaVolumenDatosNegativos()
+        {
+            var largo = -10;
+            var ancho = 5;
+            var altura = 20;
+            var ValorEsperado = 0;
+
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenPrisma(largo, ancho, altura);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void VolumenPiramideCuadradaDatosPositivos()
+        {
+            var lado = 10;
+            var altura = 20;
+            var ValorEsperado = 666.66666666666663;
+
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenPiramideCuadrada(lado, altura);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
+        [TestMethod]
+        public void VolumenPiramideCuadradaDatosNegativos()
+        {
+            var lado = -10;
+            var altura = 20;
+            var ValorEsperado = 0;
+
+            var ValorReal = 0.0;
+
+            var elServicio = new WcfService.Service1();
+            ValorReal = elServicio.VolumenPiramideCuadrada(lado, altura);
+
+            Assert.AreEqual(ValorEsperado, ValorReal);
+        }
+
     }
 }

@@ -164,5 +164,19 @@ namespace PracticaPrimerParcial.WcfService
             var resultado = laEspecificacion.VolumenEsfera(radio);
             return resultado;
         }
+
+        public double VolumenPiramideCuadrada(double lado, double altura)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionPiramideCuadrada();
+            var resultado = laEspecificacion.VolumenPiramideCuadrada(lado, altura);
+            return resultado;
+        }
+
+        public double VolumenPrisma(double largo, double ancho, double altura)
+        {
+            var laEspecificacion = new Logica.Especificacion.OperacionPrisma();
+            var resultado = laEspecificacion.VolumenPrisma(largo, ancho, altura);
+            return resultado;
+        }
     }
 }
