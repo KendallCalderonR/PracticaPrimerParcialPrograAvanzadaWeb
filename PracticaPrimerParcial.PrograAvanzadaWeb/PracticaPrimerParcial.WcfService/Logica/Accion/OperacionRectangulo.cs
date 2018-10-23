@@ -17,7 +17,7 @@ namespace PracticaPrimerParcial.WcfService.Logica.Accion
             }
         }
 
-        public double PerimetroRectangulo(double Largo, double Ancho)
+        internal double PerimetroRectangulo(double Largo, double Ancho)
         {
             var Validacion = new Logica.Validacion.OperacionRectangulo();
             var resultado = 0.0;
@@ -35,7 +35,7 @@ namespace PracticaPrimerParcial.WcfService.Logica.Accion
         
         }
 
-        public double AreaRectangulo(double Largo, double Ancho)
+        internal double AreaRectangulo(double Largo, double Ancho)
         {
             var Validacion = new Logica.Validacion.OperacionRectangulo();
             var resultado = 0.0;
