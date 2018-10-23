@@ -18,7 +18,7 @@ namespace PracticaPrimerParcial.WcfService.Logica.Accion
         }
 
 
-        public double PerimetroCuadrado(double lado)
+        internal double PerimetroCuadrado(double lado)
         {
             var Validacion = new Logica.Validacion.OperacionCuadrado();
             var resultado = 0.0;
@@ -36,7 +36,7 @@ namespace PracticaPrimerParcial.WcfService.Logica.Accion
 
         }
 
-        public double AreaCuadrado(double lado)
+        internal double AreaCuadrado(double lado)
         {
             var Validacion = new Logica.Validacion.OperacionCuadrado();
             var resultado = 0.0;
